@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc --project tsconfig.json",
+    "deploy": "npm run build && node --enable-source-maps dist/deploy-commands.js",
     "start": "npm run build && node --enable-source-maps dist/index.js"
   },
   "author": "modl",

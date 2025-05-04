@@ -25,6 +25,7 @@ jobs:
         ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
           cd /home/modl/modl-discord
           git pull origin main
+          rm -rf dist/
           npm install
           pm2 restart modl-discord
         EOF
